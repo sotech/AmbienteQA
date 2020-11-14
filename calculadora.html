@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+    <script src="calculadora.js"></script>
+</head>
+<body>
+    <h1>Calculadora de Impuestos</h1>
+    <h3>Informacion</h3>
+    <p>Esta calculadora se encarga de devolver la cantidad de impuestos a pagar segun lo que se <b>vende</b> o <b>compra</b>.</p>
+    <hr>
+    <h2>Compra</h2>
+    <p>Al realizar una compra, se cobrara un impuesto de la siguiente manera:</p>
+    <h4>Si se pago con tarjeta un producto con precio menor a $5000, se pagara un 20% de lo pagado</h4>
+    <h4>Si se pago con tarjeta un producto con precio mayor a $5000, se pagara un 10% de lo pagado</h4>
+    <h4>Si se pago con tarjeta un producto con precio igual a $5000, no habrá impuesto</h4>
+    <h4>Si se pago de contado un producto con precio menor a $3000, se pagara un 5% de lo pagado</h4>
+    <h4>Si se pago de contado un producto con precio igual o mayor a $3000, se pagara un 7% de lo pagado</h4>
+    <div class="calculadora">
+        <input type="radio" id="tarjeta" name="metodo_pago" value="tarjeta">
+        <label for="tarjeta">Tarjeta</label><br>
+        <input type="radio" id="contado" name="metodo_pago" value="contado">
+        <label for="contado">Contado</label><br>
+        <span>Precio: $</span><input type="number" name="precio-compra" id="precio-compra"><br>
+        <button onclick="compraCalcular()">Calcular Compra</button><br>
+        <span>Impuesto a pagar: $</span><span id="impuesto-compra">-</span>
+    </div>
+    <hr>
+    <h2>Venta</h2>
+    <p>Al realizar una venta, se debe informar la cantidad de productos vendidos y el precio unitario. Luego se cobra un impuesto a lo vendido:</p>
+    <h4>Si el producto tiene un valor unitario menor o igual a $10000, solo se permite vender hasta 5 unidades. El impuesto sera de un 10% del total </h4>
+    <h4>Si el producto tiene un valor unitario mayor a $10000, se permite vender hasta 50 unidades. El impuesto sera de un 50% a lo vendido</h4>
+    <div class="calculadora">
+        <span>Precio Unitario: </span><input type="text" name="cantidad-productos" id="cantidad-productos"><br>
+        <span>Precio Unitario: $</span><input type="number" name="precio-venta" id="precio-venta"><br>        
+        <button onclick="ventaCalcular()">Calcular Venta</button><br>
+        <span>Impuesto a pagar: $</span><span id="impuesto-venta">-</span><br>
+        <span id="mensaje-error"></span>
+    </div>
+    <hr>
+    <h2>Tareas</h2>
+    <p>Verificar que los siguientes casos se cumplan:</p>
+    <ul>
+        <li>El pago con tarjeta se calcula correctamente</li>
+        <li>El pago de contado se calcula correctamente</li>
+        <li>La venta se calcula correctamente</li>
+        <li>La venta de productos permite valores dentro de los rangos permitidos</li>
+        <li>Solo se puede introducir numeros a los campos</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: lightblue;
+}
+
+h1,p,ul{
+    text-align: center;
+}
+
+p,ul{
+    font-size: large;
+}
+
+body p{
+    margin: 30px;
+}
+img{
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+
+.aplicaciones{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

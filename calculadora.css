@@ -1,0 +1,12 @@
+body{
+    background-color: orange;
+}
+h1{
+    text-align: center;
+}
+
+.calculadora{
+    padding:50px;
+    border: 2px solid black;
+    text-align: center;
+}
